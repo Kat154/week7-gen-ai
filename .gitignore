@@ -1,0 +1,7 @@
+*env
+*env-variables 
+*docker*
+*.pem
+*__pycache__
+*.pdf*
+*.sh*
