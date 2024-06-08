@@ -3,5 +3,4 @@
 *docker*
 *.pem
 *__pycache__
-*.pdf*
 *.sh*
