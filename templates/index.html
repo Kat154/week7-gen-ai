@@ -1,0 +1,68 @@
+
+
+
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>gpt-3.5-turbo</title>
+    <style>
+         background-image: url({{url_for('static',filename='img/home.jpg')}}        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #444;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label {
+            font-weight: bold;
+        }
+        textarea {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        input[type="submit"] {
+            background-color: #5CDB95;
+            color: #05386B;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #EDF5E1;
+            border-left: 5px solid #5CDB95;
+        }
+    </style>
+</head>
+<body>
+    <h1>gpt-3.5-turbo</h1>
+    <form action="/analyze" method="post">
+        <label for="userInput">Enter Text:</label><br>
+        <textarea id="userInput" name="userInput" rows="4"></textarea><br>
+        <input type="submit" value="Analyze">
+    </form>
+    {% if result %}
+    <div id="result">Result: {{ result }}</div>
+
+    {% endif %}
+    {% if sources %}
+    <div id="sources">Sources for the response:{{ sources }}</div>
+
+    {% endif %}
+</body>
+</html>
