@@ -118,4 +118,4 @@ def take_text_input_from_user():
   return render_template("index.html", result=predicted_value,sources=final_str)
 
 if __name__=="__main__":
-    app.run()
+    app.run(host='0.0.0.0')

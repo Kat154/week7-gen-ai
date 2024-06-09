@@ -9,3 +9,5 @@ pymupdf==1.24.5
 pinecone-client==4.1.1
 ipython
 flask
+gunicorn
+wheel
